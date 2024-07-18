@@ -93,6 +93,7 @@ const LibraryScreen = () => {
           data={[
             //"Liked songs"
             <PlaylistLikedSongItem heightItem={heightItem} />,
+            //"Suggestion for you" and other playlists
             ...dataPlaylist.map((dataItem, index) => (
               <PlaylistItem
                 key={index}
