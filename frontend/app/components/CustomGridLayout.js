@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 
+//Defines the layout of Components on Main Landing Page
 const CustomGridLayout = ({
   columns,
   gap = 0,
@@ -41,7 +42,7 @@ const CustomGridLayout = ({
           row.push(
             <View style={[styles.column, styleCell]} key={`column_${i}_${j}`}>
               {item}
-            </View>,
+            </View>
           );
 
           if (j < columns - 1) {
@@ -52,7 +53,7 @@ const CustomGridLayout = ({
             <View
               style={[styles.column, styleCell, styles.emptyCell]}
               key={`emptyCell_${i}_${j}`}
-            />,
+            />
           );
           if (j < columns - 1) {
             row.push(<View style={{ width: gap }} key={`gapRow_${i}_${j}`} />);
@@ -63,14 +64,14 @@ const CustomGridLayout = ({
       grid.push(
         <View style={styles.row} key={`row_${i}`}>
           {row}
-        </View>,
+        </View>
       );
 
       if (i < calculateRows() - 1) {
         grid.push(
           <View style={{ width: gap, height: gap }} key={`gapColumn_${i}`}>
             <View style={{ width: gap }} />
-          </View>,
+          </View>
         );
       }
     }
